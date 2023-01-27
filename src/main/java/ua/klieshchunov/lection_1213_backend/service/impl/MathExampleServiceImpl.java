@@ -22,6 +22,9 @@ public class MathExampleServiceImpl implements MathExampleService {
 
     @Override
     public String[] generateExamplesArray(int quantity) {
+        if (quantity <= 0)
+            quantity = 1;
+
         String[] examples = new String[quantity];
 
         for (int i = 0; i < quantity; i++) {
